@@ -1,7 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
-import reducerlist from "./TutoSclice";
+import tutoReducer from "./tutoSlice";
+
 export default configureStore({
   reducer: {
-    list: reducerlist,
+    tuto: tutoReducer,
   },
 });

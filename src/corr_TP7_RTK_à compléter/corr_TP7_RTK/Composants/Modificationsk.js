@@ -1,36 +1,32 @@
 import { useState } from "react";
-import { useDispatch } from "react-redux";
-import { Ajoutk } from "../TutoSclice";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate, useParams } from "react-router-dom";
+import { modifier } from "../tutoSlice";
 
-export default function Ajout() {
+export default function Modification() {
+  const { id } = useParams();
+  const list = useSelector((st) => st.tuto.liste);
+  const find = list.find((e) => e.code == id);
   const dispatch = useDispatch();
-  const [code, setCode] = useState("");
-  const [titre, setTitre] = useState("");
-  const [description, setDescription] = useState("");
-
+  const [titre, setTitre] = useState(find.titre);
+  const [description, setDescription] = useState(find.description);
+  const nav = useNavigate();
   function handelSub(e) {
     e.preventDefault();
-    if (code == "" || titre == "" || description == "") {
+    if (titre == "" || description == "") {
       alert("champ vid");
     } else {
-      dispatch(Ajoutk({ code, titre, description }));
-      setCode("");
+      dispatch(modifier({ id, titre, description }));
       setDescription("");
       setTitre("");
+      nav("/", { state: { mes: "se modiiiidid" } });
     }
   }
   return (
     <div className="container">
-      <h1>Nouveau Tutoriel</h1>
+      <h1>Mise a jour du Tuto {id} </h1>
+      {console.log(find)}
       <form action="" onSubmit={handelSub}>
-        Code <br />
-        <input
-          onChange={(e) => setCode(e.target.value)}
-          className="form-control form-control-lg"
-          type="text"
-          value={code}
-          aria-label=".form-control-lg example"
-        />
         Titre <br />
         <input
           onChange={(e) => setTitre(e.target.value)}
@@ -48,7 +44,7 @@ export default function Ajout() {
           aria-label=".form-control-sm example"
         />{" "}
         <br />
-        <button className="btn btn-primary">Ajouter</button>
+        <button className="btn btn-primary">Modification</button>
       </form>
     </div>
   );

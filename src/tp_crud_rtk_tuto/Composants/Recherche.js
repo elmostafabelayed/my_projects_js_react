@@ -2,18 +2,19 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { Recherche } from "../TutoSclice";
 
-export default function Recherch(){
+export default function Recherch(props) {
    const dispatch =useDispatch()
     const [inpt,setInp]=useState('')
 function handlsub(e){
     e.preventDefault();
     dispatch(Recherche(inpt))
+
 }
   return (
     <div>
       <form action="" onSubmit={handlsub}>
         <input
-          class="form-control"
+          className="form-control"
           type="text"
           value={inpt} onChange={(e)=>setInp(e.target.value)}
           placeholder="Chercher par titre"
