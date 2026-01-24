@@ -1,11 +1,59 @@
 {
-  "stagiaires": [
+  "notes": [
     {
-      "id": "ID_1766098295604",
-      "nom": "Asddd",
-      "email": "hh@hhhh",
-      "tel": "1234567890°+",
-      "niveau": "ts"
+      "id": "2",
+      "title": "React Basics",
+      "body": "Components, props, state and hooks are the core of React."
+    },
+    {
+      "id": "3",
+      "title": "Redux Toolkit",
+      "body": "Redux Toolkit simplifies Redux with slices and thunks."
+    },
+    {
+      "id": "4",
+      "title": "Async Thunks",
+      "body": "createAsyncThunk helps manage async logic like API calls."
+    },
+    {
+      "id": "5",
+      "title": "useSelector",
+      "body": "useSelector allows you to read data from the Redux store."
+    },
+    {
+      "id": "6",
+      "title": "useDispatch",
+      "body": "useDispatch is used to dispatch actions to the Redux store."
+    },
+    {
+      "id": "7",
+      "title": "CRUD Operations",
+      "body": "Create, Read, Update and Delete are the basics of any app."
+    },
+    {
+      "id": "8",
+      "title": "Search Feature",
+      "body": "Filtering notes by title improves user experience."
+    },
+    {
+      "id": "9",
+      "title": "Bootstrap UI",
+      "body": "Bootstrap helps build clean and responsive UI fast."
+    },
+    {
+      "id": "10",
+      "title": "Portfolio Project",
+      "body": "This Notes App is a great project for your portfolio."
+    },
+    {
+      "id": "9448",
+      "title": "react",
+      "body": "create new project"
+    },
+    {
+      "id": "7550",
+      "title": "new",
+      "body": "h"
     }
   ]
 }
