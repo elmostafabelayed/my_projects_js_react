@@ -1,0 +1,50 @@
+const recettesInitiales = [
+  {
+    id: 1,
+    titre: "Tajine de poulet auxolives",
+    catégorie: "Plat principal",
+    tempsPrepa: 45,
+    difficulté: "Moyen",
+    ingrédients: [
+      "4 cuisses de poulet",
+      "2 oignons",
+      "200g d'olives vertes",
+      "2 citrons confits",
+    ],
+    favori: true,
+    dateCréation: "2025-12-01",
+  },
+  {
+    id: 2,
+    titre: "Salade César",
+    catégorie: "Entrée",
+    tempsPrepa: 20,
+    difficulté: "Facile",
+    ingrédients: [
+      "1 laitue romaine",
+      "100g de parmesan",
+      "2 œufs durs",
+      "Croûtons",
+      "Sauce César",
+    ],
+    favori: false,
+    dateCréation: "2025-12-10",
+  },
+  {
+    id: 3,
+    titre: "Gâteau au chocolat fondant",
+    catégorie: "Dessert",
+    tempsPrepa: 60,
+    difficulté: "Moyen",
+    ingrédients: [
+      "200g de chocolat noir",
+      "150g de beurre",
+      "4 œufs",
+      "100g de sucre",
+      "50g de farine",
+    ],
+    favori: true,
+    dateCréation: "2025-12-15",
+  },
+];
+export default recettesInitiales;
